@@ -26,7 +26,7 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx macports rvm github switch-net-env dev-env host-configs)
+plugins=(osx macports svn rvm github switch-net-env dev-env host-configs)
 
 source $ZSH/oh-my-zsh.sh
 
