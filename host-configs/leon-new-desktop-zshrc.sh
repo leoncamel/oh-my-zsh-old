@@ -1,12 +1,13 @@
-
-if [ -d "$HOME/bin/" ]; then
-    export PATH=$HOME/bin/:$PATH
-fi
-
+## aliases ##
+alias rm='rm -i'
+alias pyv-activate='source /srv/py-virtualenv/bin/activate'
 
 ##############################################################
 # add my utilities from $HOME/bin
 ##############################################################
+if [ -d "$HOME/bin/" ]; then
+    export PATH=$HOME/bin/:$PATH
+fi
 
 # Homebrew : Emacs-23.3
 add_my_tools "$HOME/bin/emacs-23.3/"
