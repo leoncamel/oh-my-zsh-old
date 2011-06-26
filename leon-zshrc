@@ -8,9 +8,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-export ZSH_THEME="robbyrussell"
-#export ZSH_THEME="xiong-chiamiov-plus"
-#export ZSH_THEME="random"
+export ZSH_THEME="random"
 
 # Set to this to use case-sensitive completion
 # export CASE_SENSITIVE="true"
@@ -26,7 +24,25 @@ export DISABLE_AUTO_UPDATE="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(osx macports svn rvm github switch-net-env dev-env host-configs)
+my_host_name="$(hostname)"
+case "$(hostname)" in
+    "Leon-no-MBP")
+        export ZSH_THEME="robbyrussell"
+        plugins=(osx macports svn rvm github switch-net-env dev-env host-configs)
+        echo "Load Plugins for $my_host_name"
+        echo "  Plugins: $plugins"
+        ;;
+    "leon-new-desktop")
+        plugins=(svn rvm github switch-net-env dev-env host-configs)
+        echo "Load Plugins for $my_host_name"
+        echo "  Plugins: $plugins"
+        ;;
+    *)
+        plugins=(svn rvm github switch-net-env dev-env host-configs)
+        echo "Load default plugins for Unknow-host"
+        echo "  Plugins: $plugins"
+        ;;
+esac
 
 source $ZSH/oh-my-zsh.sh
 
