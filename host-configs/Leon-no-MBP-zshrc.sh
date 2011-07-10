@@ -77,3 +77,6 @@ export PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/":$PATH
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
+# NVM : node version manager
+[[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh" # Load NVM function
+
