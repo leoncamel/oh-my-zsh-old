@@ -25,9 +25,9 @@ function add_my_tools() {
     if [ -d "$my_toolset_root/bin/" ]; then
         export PATH="$my_toolset_root/bin:$PATH"
     fi
-    #if [ -d "$my_toolset_root/sbin/" ]; then
-    #    export PATH="$my_toolset_root/sbin:$PATH"
-    #fi
+    if [ -d "$my_toolset_root/sbin/" ]; then
+        export PATH="$my_toolset_root/sbin:$PATH"
+    fi
     if [ -d "$my_toolset_root/share/man/" ]; then
         export MANPATH="$my_toolset_root/share/man:$MANPATH"
     fi

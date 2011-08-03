@@ -80,3 +80,7 @@ export PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/":$PATH
 # NVM : node version manager
 [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh" # Load NVM function
 
+# homebrew
+add_my_tools $HOME/bin/homebrew/
+alias t='todo.sh'
+
