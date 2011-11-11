@@ -8,12 +8,14 @@ alias readlink='greadlink'
 alias du='gdu'
 alias sed='gsed'
 alias pyv-activate='source ~/pyvirt/bin/activate'
+alias ec='emacsclient -n'
 
 # Mac OSX's alias
 alias chrome_proxy='open -a /Applications/Internet/Google\ Chrome.app --args --proxy-server=133.9.49.250:8080 --proxy-bypass-list=localhost,127.0.0.0/8,*.local,192.168.0.0/16,13'
 alias chrome_timel='open -a /Applications/Internet/Google\ Chrome.app --args --enable-extension-timeline-api'
 
 alias mplayerx='open -a /Applications/MPlayerX.app'
+alias splayerx='open -a /Applications/SPlayerX.app'
 
 # TODO : fix this for my MacBook Pro
 # these option are dumped from ubuntu
@@ -29,6 +31,12 @@ if [ -d "$HOME/bin/" ]; then
     export PATH=$HOME/bin/:$PATH
 fi
 
+# MacRuby : 
+#    notes : 
+#       [1] Built from "/Users/leoncamel/tmp/MacRuby/MacRuby-MacRuby-ed8b060"
+#       [2] No "CFNetwork" wrapper. So, I comment this out.
+# add_my_tools "/Library/Frameworks/MacRuby.framework/Versions/Current/usr"
+
 # MacPorts root
 add_my_tools "/opt/local/"
 
@@ -39,7 +47,7 @@ export PATH="$HOME/Library/Haskell/bin:$PATH"
 #add_my_tools "$HOME/.cabal/"
 
 # node.js git version
-add_my_tools "$HOME/bin/node-git/"
+#add_my_tools "$HOME/bin/node-git/"
 
 # Leon's Misc Utilities
 add_my_tools "$HOME/bin/proxytunnel-1.9.0/"
@@ -68,7 +76,10 @@ export PATH="$HOME/bin/AllegroCL/":$PATH
 add_my_tools "$HOME/bin/cmigemo/"
 
 # Macport's emacs : for "emacsclient"
-export PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/":$PATH
+#export PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/":$PATH
+
+# Erlang
+add_my_tools "$HOME/bin/erlang-r14b04-by-kerl/"
 
 # CUDA SDK
 #export PATH=/usr/local/cuda/bin:$PATH
@@ -80,7 +91,10 @@ export PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/":$PATH
 # NVM : node version manager
 [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh" # Load NVM function
 
+##########
 # homebrew
+export HOMEBREW_EDITOR="emacsclient -n"
+
 add_my_tools $HOME/bin/homebrew/
 alias t='todo.sh'
 

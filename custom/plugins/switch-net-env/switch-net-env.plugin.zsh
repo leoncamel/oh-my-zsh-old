@@ -32,8 +32,9 @@ switch-net-env() {
             unset https_proxy
             unset ftp_proxy
             unset no_proxy
-            unset GIT_PROXY_COMMAND
             unset ANT_OPTS
+            unset RSYNC_PROXY
+            unset GIT_PROXY_COMMAND
             ;;
         (*)
             printf '%s\n\n' 'Invalid parameter'
