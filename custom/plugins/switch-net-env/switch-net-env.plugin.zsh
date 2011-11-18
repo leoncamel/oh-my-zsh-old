@@ -43,7 +43,48 @@ switch-net-env() {
     esac
 }
 
+mac-proxy-net-env() {
+    emulate -L zsh  # TODO: Necessary or not?
+    local usage
+    usage='osx-net-env {on,off}'
+
+    case `uname -s` in
+        ("Darwin")
+            printf "Your OS is : '%s'\nContinue ...\n" `uname -s`
+            ;;
+        (*)
+            printf "Your OS is not Mac OSX. Can NOT use this function.\n" && return 1
+            ;;
+    esac
+
+    case $1 in
+        ("")
+            printf '%s\n' 'Enable/Disable proxy(http,https,ftp) settings on Ethernet.'
+            printf '%s\n' 'Usage:'
+            printf '\t\t%s\n\n\n' ${usage} && return 1
+            ;;
+        (on)
+            # networksetup -setftpproxy Ethernet 133.9.49.250 8080 on
+            # networksetup -setwebproxy Ethernet 133.9.49.250 8080 on
+            # networksetup -setsecurewebproxystate Ethernet 133.9.49.250 8080 on
+            networksetup -setftpproxystate Ethernet on
+            networksetup -setwebproxystate Ethernet on
+            networksetup -setsecurewebproxystate Ethernet on
+            printf '%s\n\n' 'networksetup : Enable proxy setting on Ethernet'
+            ;;
+        (off)
+            # networksetup -setftpproxy Ethernet 133.9.49.250 8080 off
+            # networksetup -setwebproxy Ethernet 133.9.49.250 8080 off
+            # networksetup -setsecurewebproxystate Ethernet 133.9.49.250 8080 off
+            networksetup -setftpproxystate Ethernet off
+            networksetup -setwebproxystate Ethernet off
+            networksetup -setsecurewebproxystate Ethernet off
+            printf '%s\n\n' 'networksetup : Disable proxy setting on Ethernet'
+    esac
+}
+
 compdef 'compadd home waseda mitmproxy' switch-net-env
+compdef 'compadd on off' mac-proxy-net-env
 
 ## END OF FILE #################################################################
 # vim:filetype=zsh foldmethod=marker autoindent expandtab shiftwidth=4
