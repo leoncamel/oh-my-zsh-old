@@ -9,18 +9,22 @@ if [ -d "$HOME/bin/" ]; then
     export PATH=$HOME/bin/:$PATH
 fi
 
-# Homebrew : Emacs-23.3
-add_my_tools "$HOME/bin/emacs-23.3/"
+# my-homebrew : Emacs-23.3
+#add_my_tools "$HOME/bin/emacs-23.3/"
+add_my_tools "$HOME/bin/emacs-git/"
+alias ec='emacsclient -n'
 
 # ghc-6.12.3
 #add_my_tools "$HOME/bin/ghc-6.12.3/"
 add_my_tools "$HOME/bin/ghc-7.0.3/"
+add_my_tools "$HOME/bin/ghc-7.2.1/"
 add_my_tools "$HOME/bin/haskell-platform-2011.2.0.1/"
 # Cabal
 add_my_tools "$HOME/.cabal/"
 
 # node.js
 add_my_tools "$HOME/bin/node-git/"
+#add_my_tools "$HOME/bin/node-v0.4.8/"
 
 # gccsense
 add_my_tools "$HOME/bin/gcc-code-assist/"
@@ -30,6 +34,9 @@ add_my_tools "$HOME/bin/gcc-code-assist/"
 #add_my_tools "$HOME/bin/cmucl-20b/"
 #add_my_tools "$HOME/bin/ccl-darwin-1.6/"
 add_my_tools "$HOME/bin/global-5.9.5/"
+
+# gnuplot
+add_my_tools "$HOME/bin/gnuplot-4.2.6/"
 
 # plowshare supports:
 # Megaupload, Rapidshare, 2Shared, 4Shared, ZShare, Badongo, Divshare.com,
@@ -53,6 +60,6 @@ add_my_tools "$HOME/bin/gephi/"
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
-# NVM : node version manager
+# NVM : Nodejs Version Manager
 [[ -s "$HOME/.nvm/nvm.sh" ]] && . "$HOME/.nvm/nvm.sh" # Load NVM function
 
