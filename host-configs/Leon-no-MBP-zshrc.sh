@@ -98,3 +98,7 @@ export HOMEBREW_EDITOR="emacsclient -n"
 add_my_tools $HOME/bin/homebrew/
 alias t='todo.sh'
 
+#
+# Texlive 2011
+#
+#export PATH=/usr/local/texlive/2011/bin/x86_64-darwin/:$PATH
