@@ -24,6 +24,11 @@ then
     alias ls='gls --color=auto'
 fi
 
+######
+# add "/usr/local/bin" to $PATH
+######
+export PATH=/usr/local/bin/:$PATH
+
 ##############################################################
 # add my utilities from $HOME/bin
 ##############################################################
