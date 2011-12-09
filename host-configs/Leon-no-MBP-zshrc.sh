@@ -109,8 +109,8 @@ alias rsync='rsync --progress'
 alias chrome_proxy='open -a /Applications/Internet/Google\ Chrome.app --args --proxy-server=133.9.49.250:8080 --proxy-bypass-list=localhost,127.0.0.0/8,*.local,192.168.0.0/16,13'
 alias chrome_timel='open -a /Applications/Internet/Google\ Chrome.app --args --enable-extension-timeline-api'
 
-alias mplayerx='open -a /Applications/MPlayerX.app'
-alias splayerx='open -a /Applications/SPlayerX.app'
+#alias mplayerx='open -a /Applications/MPlayerX.app'
+#alias splayerx='open -a /Applications/SPlayerX.app'
 
 # TODO : fix this for my MacBook Pro
 # these option are dumped from ubuntu

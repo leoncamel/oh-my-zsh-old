@@ -28,7 +28,7 @@ my_host_name="$(hostname)"
 case "$(hostname)" in
     "Leon-no-MBP")
         export ZSH_THEME="robbyrussell"
-        plugins=(osx macports svn rvm github switch-net-env dev-env host-configs)
+        plugins=(osx macports svn rvm github switch-net-env dev-env host-configs splayerx)
         echo "Load Plugins for $my_host_name"
         echo "  Plugins: $plugins"
         ;;
