@@ -1,6 +1,7 @@
 ## aliases ##
 alias rm='rm -i'
 alias pyv-activate='source /srv/py-virtualenv/bin/activate'
+alias rsync='rsync --progress'
 
 ##############################################################
 # add my utilities from $HOME/bin

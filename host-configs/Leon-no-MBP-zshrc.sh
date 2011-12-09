@@ -103,6 +103,7 @@ alias du='gdu'
 alias sed='gsed'
 alias pyv-activate='source ~/pyvirt/bin/activate'
 alias ec='emacsclient -n'
+alias rsync='rsync --progress'
 
 # Mac OSX's alias
 alias chrome_proxy='open -a /Applications/Internet/Google\ Chrome.app --args --proxy-server=133.9.49.250:8080 --proxy-bypass-list=localhost,127.0.0.0/8,*.local,192.168.0.0/16,13'
