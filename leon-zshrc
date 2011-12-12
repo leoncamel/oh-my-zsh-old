@@ -33,7 +33,13 @@ case "$(hostname)" in
         echo "  Plugins: $plugins"
         ;;
     "leon-new-desktop")
-        plugins=(command-not-found svn rvm github switch-net-env dev-env host-configs)
+        plugins=(svn rvm github switch-net-env dev-env host-configs)
+        echo "Load Plugins for $my_host_name"
+        echo "  Plugins: $plugins"
+        ;;
+    "slsi177")
+        export ZSH_THEME="afowler"
+        plugins=(svn rvm github switch-net-env dev-env host-configs)
         echo "Load Plugins for $my_host_name"
         echo "  Plugins: $plugins"
         ;;
