@@ -79,6 +79,9 @@ add_my_tools "$HOME/bin/erlang-r14b04-by-kerl/"
 # homebrew
 alias emacs-app="open -a /Users/leoncamel/bin/homebrew/Cellar/emacs/HEAD/Emacs.app"
 export HOMEBREW_EDITOR="emacsclient -n"
+export HOMEBREW_KEEP_INFO=1
+export HOMEBREW_VERBOSE=1
+export HOMEBREW_MAKE_JOBS=1
 
 add_my_tools $HOME/bin/homebrew/
 alias t='todo.sh'
