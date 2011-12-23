@@ -77,6 +77,7 @@ add_my_tools "$HOME/bin/erlang-r14b04-by-kerl/"
 
 ##########
 # homebrew
+alias emacs-app="open -a /Users/leoncamel/bin/homebrew/Cellar/emacs/HEAD/Emacs.app"
 export HOMEBREW_EDITOR="emacsclient -n"
 
 add_my_tools $HOME/bin/homebrew/
@@ -86,7 +87,7 @@ alias t='todo.sh'
 # Texlive 2011
 #
 # TODO: pstopdf can not work?
-#export PATH=/usr/local/texlive/2011/bin/x86_64-darwin/:$PATH
+export PATH=/usr/local/texlive/2011/bin/x86_64-darwin/:$PATH
 
 ################################################################################
 ## alias
