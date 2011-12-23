@@ -1,32 +1,16 @@
-# TODO : for my MacBook Pro
-# coreutils alias
-#alias find='gfind'
-alias df='gdf -a'
-alias rm='grm -i'
-alias cp='gcp'
-alias readlink='greadlink'
-alias du='gdu'
-alias sed='gsed'
-alias pyv-activate='source ~/pyvirt/bin/activate'
-alias ec='emacsclient -n'
 
-# Mac OSX's alias
-alias chrome_proxy='open -a /Applications/Internet/Google\ Chrome.app --args --proxy-server=133.9.49.250:8080 --proxy-bypass-list=localhost,127.0.0.0/8,*.local,192.168.0.0/16,13'
-alias chrome_timel='open -a /Applications/Internet/Google\ Chrome.app --args --enable-extension-timeline-api'
+################################################################################
+## utilities PATHs
+################################################################################
 
-alias mplayerx='open -a /Applications/MPlayerX.app'
-alias splayerx='open -a /Applications/SPlayerX.app'
+#
+# add "/usr/local/bin" to $PATH
+#
+export PATH=/usr/local/bin/:$PATH
 
-# TODO : fix this for my MacBook Pro
-# these option are dumped from ubuntu
-if [[ -x "/opt/local/bin/gls" ]]
-then
-    alias ls='gls --color=auto'
-fi
-
-##############################################################
+#
 # add my utilities from $HOME/bin
-##############################################################
+#
 if [ -d "$HOME/bin/" ]; then
     export PATH=$HOME/bin/:$PATH
 fi
@@ -93,7 +77,11 @@ add_my_tools "$HOME/bin/erlang-r14b04-by-kerl/"
 
 ##########
 # homebrew
+alias emacs-app="open -a /Users/leoncamel/bin/homebrew/Cellar/emacs/HEAD/Emacs.app"
 export HOMEBREW_EDITOR="emacsclient -n"
+export HOMEBREW_KEEP_INFO=1
+export HOMEBREW_VERBOSE=1
+export HOMEBREW_MAKE_JOBS=1
 
 add_my_tools $HOME/bin/homebrew/
 alias t='todo.sh'
@@ -101,4 +89,36 @@ alias t='todo.sh'
 #
 # Texlive 2011
 #
-#export PATH=/usr/local/texlive/2011/bin/x86_64-darwin/:$PATH
+# TODO: pstopdf can not work?
+export PATH=/usr/local/texlive/2011/bin/x86_64-darwin/:$PATH
+
+################################################################################
+## alias
+################################################################################
+
+# TODO : for my MacBook Pro
+# coreutils alias
+#alias find='gfind'
+alias df='gdf -a'
+alias rm='grm -i'
+alias cp='gcp'
+alias readlink='greadlink'
+alias du='gdu'
+alias sed='gsed'
+alias pyv-activate='source ~/pyvirt/bin/activate'
+alias ec='emacsclient -n'
+alias rsync='rsync --progress'
+
+# Mac OSX's alias
+alias chrome_proxy='open -a /Applications/Internet/Google\ Chrome.app --args --proxy-server=133.9.49.250:8080 --proxy-bypass-list=localhost,127.0.0.0/8,*.local,192.168.0.0/16,13'
+alias chrome_timel='open -a /Applications/Internet/Google\ Chrome.app --args --enable-extension-timeline-api'
+
+#alias mplayerx='open -a /Applications/MPlayerX.app'
+#alias splayerx='open -a /Applications/SPlayerX.app'
+
+# TODO : fix this for my MacBook Pro
+# these option are dumped from ubuntu
+if [[ -x "$(which gls)" ]]
+then
+    alias ls='gls --color=auto'
+fi
