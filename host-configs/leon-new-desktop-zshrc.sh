@@ -58,6 +58,9 @@ add_my_tools "$HOME/bin/gephi/"
 #export PATH=/usr/local/cuda/bin:$PATH
 #export DYLD_LIBRARY_PATH=/usr/local/cuda/lib:$DYLD_LIBRARY_PATH
 
+# texlive 2011
+export PATH=/usr/local/texlive/2011/bin/x86_64-linux:$PATH
+
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
