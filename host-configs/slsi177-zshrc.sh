@@ -9,7 +9,7 @@ if [ -d "$HOME/bin/" ]; then
 fi
 
 # Leon's Misc Utilities
-add_my_tools "$HOME/bin/proxytunnel-1.9.0/"
+add_my_tools "$HOME/bin/proxytunnel-1.9/"
 
 # ghc
 add_my_tools "$HOME/bin/ghc-7.2.2/"
