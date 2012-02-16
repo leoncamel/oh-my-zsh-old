@@ -8,6 +8,8 @@
 #
 export PATH=/usr/local/bin/:$PATH
 
+export PATH=/usr/X11/bin:$PATH
+
 #
 # add my utilities from $HOME/bin
 #
@@ -55,6 +57,9 @@ export PATH="$HOME/bin/GoogleAppEngine/":$PATH
 
 # Allegro CL
 export PATH="$HOME/bin/AllegroCL/":$PATH
+
+# Racket-v5.2
+add_my_tools "$HOME/bin/Racket-v5.2/"
 
 # cmigemo
 add_my_tools "$HOME/bin/cmigemo/"
