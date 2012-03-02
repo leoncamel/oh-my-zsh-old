@@ -31,6 +31,7 @@ add_my_tools "/opt/local/"
 # Cabal
 export PATH="$HOME/Library/Haskell/bin:$PATH"
 #add_my_tools "$HOME/.cabal/"
+alias hsenv="virthualenv"
 
 # node.js git version
 #add_my_tools "$HOME/bin/node-git/"
@@ -68,7 +69,7 @@ add_my_tools "$HOME/bin/cmigemo/"
 #export PATH="/Applications/MacPorts/Emacs.app/Contents/MacOS/bin/":$PATH
 
 # Erlang
-add_my_tools "$HOME/bin/erlang-r14b04-by-kerl/"
+# add_my_tools "$HOME/bin/erlang-r14b04-by-kerl/"
 
 # CUDA SDK
 #export PATH=/usr/local/cuda/bin:$PATH
@@ -90,6 +91,9 @@ export HOMEBREW_MAKE_JOBS=1
 
 add_my_tools $HOME/bin/homebrew/
 alias t='todo.sh'
+
+# python in homebrew
+export PATH="$HOME/bin/homebrew/share/python:$PATH"
 
 #
 # Texlive 2011
@@ -120,6 +124,10 @@ alias chrome_timel='open -a /Applications/Internet/Google\ Chrome.app --args --e
 
 #alias mplayerx='open -a /Applications/MPlayerX.app'
 #alias splayerx='open -a /Applications/SPlayerX.app'
+
+# SourceGraph : A haskell program analyzer
+#               http://hackage.haskell.org/package/SourceGraph
+alias sg='SourceGraph'
 
 # TODO : fix this for my MacBook Pro
 # these option are dumped from ubuntu
